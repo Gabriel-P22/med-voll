@@ -35,7 +35,7 @@ public class AttendantController {
                 new AttendantResponse(
                         attendant.getName(),
                         attendant.getEmail(),
-                        attendant.getName() // We need to replace to ID
+                        attendant.getId()
                 )
         );
     }

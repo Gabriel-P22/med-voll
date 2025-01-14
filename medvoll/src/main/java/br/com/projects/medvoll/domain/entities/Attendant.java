@@ -2,6 +2,7 @@ package br.com.projects.medvoll.domain.entities;
 
 public class Attendant {
 
+    private Long id;
     private String name;
     private String cpf;
     private String email;
@@ -17,6 +18,14 @@ public class Attendant {
         this.cpf = cpf;
         this.email = email;
         this.password = password;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
