@@ -1,5 +1,6 @@
 package br.com.projects.medvoll.infra.persistence.attendant;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,9 +15,11 @@ public class AttendantEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(unique = true)
     private String cpf;
     private String name;
     private String password;
+    @Column(unique = true)
     private String email;
 
     public AttendantEntity(String cpf, String name, String password, String email) {
