@@ -3,7 +3,7 @@ package br.com.projects.medvoll.application.controller;
 import br.com.projects.medvoll.application.exchange.attendant.Attendant;
 import br.com.projects.medvoll.application.exchange.attendant.AttendantResponse;
 import br.com.projects.medvoll.application.usecases.attendant.CreateAttendant;
-import br.com.projects.medvoll.infra.mapper.AttendantMapper;
+import br.com.projects.medvoll.domain.builder.AttendantBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,7 +23,7 @@ public class AttendantController {
     @PostMapping
     ResponseEntity<AttendantResponse> create(@RequestBody Attendant body) {
         var attendant = createAttendant.create(
-                new AttendantMapper().create(
+                new AttendantBuilder().create(
                         body.name(),
                         body.cpf(),
                         body.email(),
