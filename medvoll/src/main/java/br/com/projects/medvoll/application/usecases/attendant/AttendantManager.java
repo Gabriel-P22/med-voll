@@ -15,4 +15,12 @@ public class AttendantManager {
         return repository.create(attendant);
     }
 
+    public Attendant findByCpf(String cpf) {
+        return repository.findByCpf(cpf);
+    }
+
+    public void delete(String cpf) {
+        repository.delete(cpf);
+    }
+
 }

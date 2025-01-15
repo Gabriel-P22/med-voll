@@ -22,6 +22,8 @@ public class AttendantEntity {
     @Column(unique = true)
     private String email;
 
+    public AttendantEntity() {}
+
     public AttendantEntity(String cpf, String name, String password, String email) {
         this.cpf = cpf;
         this.name = name;
@@ -67,5 +69,16 @@ public class AttendantEntity {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "AttendantEntity{" +
+                "id=" + id +
+                ", cpf='" + cpf + '\'' +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }
