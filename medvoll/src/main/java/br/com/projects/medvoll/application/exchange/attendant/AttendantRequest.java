@@ -1,6 +1,6 @@
 package br.com.projects.medvoll.application.exchange.attendant;
 
-public record Attendant(
+public record AttendantRequest(
     String name,
     String email,
     String cpf,

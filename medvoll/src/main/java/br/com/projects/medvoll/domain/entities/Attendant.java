@@ -1,5 +1,7 @@
 package br.com.projects.medvoll.domain.entities;
 
+import br.com.projects.medvoll.helper.CpfValidator;
+
 public class Attendant {
 
     private Long id;
@@ -9,11 +11,7 @@ public class Attendant {
     private String password;
 
     public Attendant(String name, String cpf, String email, String password) {
-
-        if (cpf == null || !cpf.matches("\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}")) {
-            throw new IllegalArgumentException("Invalid CPF");
-        }
-
+        CpfValidator.validator(cpf);
         this.name = name;
         this.cpf = cpf;
         this.email = email;
@@ -41,9 +39,8 @@ public class Attendant {
     }
 
     public void setCpf(String cpf) {
-        if (cpf == null || !cpf.matches("\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}")) {
-            throw new IllegalArgumentException("Invalid CPF");
-        }
+        CpfValidator.validator(cpf);
+
         this.cpf = cpf;
     }
 

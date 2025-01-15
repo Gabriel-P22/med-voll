@@ -3,11 +3,11 @@ package br.com.projects.medvoll.application.usecases.attendant;
 import br.com.projects.medvoll.application.gateway.attendant.AttendantRepository;
 import br.com.projects.medvoll.domain.entities.Attendant;
 
-public class CreateAttendant {
+public class AttendantManager {
 
     private final AttendantRepository repository;
 
-    public CreateAttendant(AttendantRepository repository) {
+    public AttendantManager(AttendantRepository repository) {
         this.repository = repository;
     }
 
