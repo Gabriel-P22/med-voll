@@ -6,5 +6,6 @@ import br.com.projects.medvoll.domain.entities.Attendant;
 public interface AttendantRepository {
     Attendant create(Attendant attendant);
     Attendant findByCpf(String cpf);
+    Attendant update(String cpf, Attendant attendant);
     void delete(String cpf);
 }

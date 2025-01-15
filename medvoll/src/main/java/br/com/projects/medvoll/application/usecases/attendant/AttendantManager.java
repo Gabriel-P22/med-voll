@@ -19,8 +19,11 @@ public class AttendantManager {
         return repository.findByCpf(cpf);
     }
 
+    public Attendant update(String cpf, Attendant attendant) {
+        return repository.update(cpf, attendant);
+    }
+
     public void delete(String cpf) {
         repository.delete(cpf);
     }
-
 }

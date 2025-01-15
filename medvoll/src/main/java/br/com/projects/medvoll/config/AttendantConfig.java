@@ -3,7 +3,7 @@ package br.com.projects.medvoll.config;
 import br.com.projects.medvoll.application.gateway.attendant.AttendantRepository;
 import br.com.projects.medvoll.application.usecases.attendant.AttendantManager;
 import br.com.projects.medvoll.infra.gateway.AttendantRepositoryImpl;
-import br.com.projects.medvoll.infra.mapper.AttendantMapper;
+import br.com.projects.medvoll.domain.mapper.AttendantMapper;
 import br.com.projects.medvoll.infra.persistence.attendant.AttendantRepositoryJpa;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
