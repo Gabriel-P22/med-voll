@@ -1,6 +1,5 @@
-package br.com.projects.medvoll.infra.gateway;
+package br.com.projects.medvoll.application.gateway.attendant;
 
-import br.com.projects.medvoll.application.gateway.attendant.AttendantRepository;
 import br.com.projects.medvoll.domain.entities.Attendant;
 import br.com.projects.medvoll.exceptions.InvalidEmail;
 import br.com.projects.medvoll.exceptions.NotFoundException;
@@ -8,13 +7,13 @@ import br.com.projects.medvoll.domain.mapper.AttendantMapper;
 import br.com.projects.medvoll.infra.persistence.attendant.AttendantEntity;
 import br.com.projects.medvoll.infra.persistence.attendant.AttendantRepositoryJpa;
 
-public class AttendantRepositoryImpl implements AttendantRepository {
+public class AttendantManagerImpl implements AttendantManager {
 
     private final AttendantRepositoryJpa repository;
 
     private final AttendantMapper mapper;
 
-    public AttendantRepositoryImpl(AttendantRepositoryJpa repository, AttendantMapper mapper) {
+    public AttendantManagerImpl(AttendantRepositoryJpa repository, AttendantMapper mapper) {
         this.repository = repository;
         this.mapper = mapper;
     }

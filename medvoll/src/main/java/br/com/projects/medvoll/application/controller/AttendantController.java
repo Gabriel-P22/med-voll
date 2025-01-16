@@ -1,11 +1,9 @@
 package br.com.projects.medvoll.application.controller;
 
-import br.com.projects.medvoll.application.exchange.attendant.AttendantRequest;
-import br.com.projects.medvoll.application.exchange.attendant.AttendantResponse;
-import br.com.projects.medvoll.application.usecases.attendant.AttendantManager;
-import br.com.projects.medvoll.domain.entities.Attendant;
+import br.com.projects.medvoll.application.dto.attendant.AttendantRequest;
+import br.com.projects.medvoll.application.dto.attendant.AttendantResponse;
+import br.com.projects.medvoll.application.gateway.attendant.AttendantManager;
 import br.com.projects.medvoll.domain.mapper.AttendantMapper;
-import jakarta.websocket.server.PathParam;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

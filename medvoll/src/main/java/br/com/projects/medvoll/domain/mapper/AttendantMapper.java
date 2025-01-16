@@ -1,6 +1,6 @@
 package br.com.projects.medvoll.domain.mapper;
 
-import br.com.projects.medvoll.application.exchange.attendant.AttendantRequest;
+import br.com.projects.medvoll.application.dto.attendant.AttendantRequest;
 import br.com.projects.medvoll.domain.entities.Attendant;
 import br.com.projects.medvoll.infra.persistence.attendant.AttendantEntity;
 

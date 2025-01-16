@@ -1,6 +1,6 @@
 package br.com.projects.medvoll.domain.entities;
 
-import br.com.projects.medvoll.helper.CpfValidator;
+import br.com.projects.medvoll.domain.helper.CpfValidator;
 
 public class Attendant {
 

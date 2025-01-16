@@ -1,4 +1,4 @@
-package br.com.projects.medvoll.helper;
+package br.com.projects.medvoll.domain.helper;
 
 public class CpfValidator {
     public static void validator(String cpf) {
