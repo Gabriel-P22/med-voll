@@ -20,6 +20,11 @@ public class AttendantManagerImpl implements AttendantManager {
 
     @Override
     public Attendant create(Attendant attendant) {
+
+        if (repository.findByEmail(attendant.getEmail()) != null) {
+            throw new InvalidEmail("Use another email");
+        }
+
         return mapper.toDomain(
                 repository.save(
                         mapper.toEntity(attendant)
