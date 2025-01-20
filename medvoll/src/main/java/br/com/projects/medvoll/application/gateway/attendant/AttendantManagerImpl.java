@@ -61,6 +61,13 @@ public class AttendantManagerImpl implements AttendantManager {
     }
 
     @Override
+    public Attendant findById(Long id) {
+        return mapper.toDomain(
+                findEntityById(id)
+        );
+    }
+
+    @Override
     public void delete(String cpf) {
         repository.delete(findAttendantByCpf(cpf));
     }
@@ -75,4 +82,9 @@ public class AttendantManagerImpl implements AttendantManager {
         return attendant;
     }
 
+    private AttendantEntity findEntityById(Long id) {
+        return repository
+                .findById(id)
+                .orElseThrow(() -> new NotFoundException("Attendant not found"));
+    }
 }

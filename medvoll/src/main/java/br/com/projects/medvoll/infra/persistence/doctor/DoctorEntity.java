@@ -3,6 +3,7 @@ package br.com.projects.medvoll.infra.persistence.doctor;
 import br.com.projects.medvoll.enums.DoctorStatus;
 import br.com.projects.medvoll.infra.persistence.address.AddressEntity;
 import jakarta.persistence.Column;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -23,6 +24,8 @@ public class DoctorEntity {
     String email;
     String password;
     DoctorStatus status;
+
+    @Embedded
     AddressEntity address;
 
     public DoctorEntity() {}

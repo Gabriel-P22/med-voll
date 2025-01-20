@@ -8,7 +8,7 @@ public record DoctorResponse(
         String lastName,
         String specialty,
         String crm,
-        AddressRequest address,
-        String email
+        String email,
+        AddressRequest address
 ) {
 }

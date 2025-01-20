@@ -15,14 +15,13 @@ public class Doctor {
 
     public Doctor() {}
 
-    public Doctor(String firstName, String lastName, String specialty, String crm, String email, String password, DoctorStatus status, Address address) {
+    public Doctor(String firstName, String lastName, String specialty, String crm, String email, String password, Address address) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.specialty = specialty;
         this.crm = crm;
         this.email = email;
         this.password = password;
-        this.status = status;
         this.address = address;
     }
 

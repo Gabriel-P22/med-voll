@@ -7,5 +7,6 @@ public interface AttendantManager {
     Attendant create(Attendant attendant);
     Attendant findByCpf(String cpf);
     Attendant update(String cpf, Attendant attendant);
+    Attendant findById(Long id);
     void delete(String cpf);
 }

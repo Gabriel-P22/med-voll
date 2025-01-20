@@ -1,5 +1,8 @@
 package br.com.projects.medvoll.infra.persistence.address;
 
+import jakarta.persistence.Embeddable;
+
+@Embeddable
 public class AddressEntity {
     String street;
     String number;
@@ -7,6 +10,8 @@ public class AddressEntity {
     String country;
     String city;
     String state;
+
+    public AddressEntity() {}
 
     public AddressEntity(String street, String number, String complement, String country, String city, String state) {
         this.street = street;
