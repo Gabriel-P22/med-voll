@@ -1,21 +1,33 @@
-package br.com.projects.medvoll.domain.entities;
+package br.com.projects.medvoll.infra.persistence.doctor;
 
 import br.com.projects.medvoll.enums.DoctorStatus;
+import br.com.projects.medvoll.infra.persistence.address.AddressEntity;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
-public class Doctor {
+@Entity
+@Table(name = "doctors")
+public class DoctorEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String firstName;
     String lastName;
     String specialty;
     String crm;
+    @Column(unique = true)
     String email;
     String password;
     DoctorStatus status;
-    Address address;
+    AddressEntity address;
 
-    public Doctor() {}
+    public DoctorEntity() {}
 
-    public Doctor(String firstName, String lastName, String specialty, String crm, String email, String password, DoctorStatus status, Address address) {
+    public DoctorEntity(String firstName, String lastName, String specialty, String crm, String email, String password, DoctorStatus status, AddressEntity address) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.specialty = specialty;
@@ -24,6 +36,22 @@ public class Doctor {
         this.password = password;
         this.status = status;
         this.address = address;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getFirstName() {
@@ -74,27 +102,11 @@ public class Doctor {
         this.status = status;
     }
 
-    public Address getAddress() {
+    public AddressEntity getAddress() {
         return address;
     }
 
-    public void setAddress(Address address) {
+    public void setAddress(AddressEntity address) {
         this.address = address;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 }

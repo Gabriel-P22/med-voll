@@ -2,6 +2,8 @@ package br.com.projects.medvoll.application.controller;
 
 import br.com.projects.medvoll.application.dto.attendant.AttendantRequest;
 import br.com.projects.medvoll.application.dto.attendant.AttendantResponse;
+import br.com.projects.medvoll.application.dto.doctor.DoctorRequest;
+import br.com.projects.medvoll.application.dto.doctor.DoctorResponse;
 import br.com.projects.medvoll.application.gateway.attendant.AttendantManager;
 import br.com.projects.medvoll.domain.mapper.AttendantMapper;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -39,6 +42,15 @@ public class AttendantController {
                 )
         );
     }
+
+    @PostMapping("/doctor")
+    ResponseEntity<DoctorResponse> createDoctor(
+            @RequestHeader String attendantId,
+            @RequestBody DoctorRequest dto
+    ) {
+        return null;
+    }
+
 
     @GetMapping("/{cpf}")
     ResponseEntity<AttendantResponse> findByCpf(@PathVariable String cpf) {

@@ -1,4 +1,4 @@
-package br.com.projects.medvoll.domain.enums;
+package br.com.projects.medvoll.enums;
 
 public enum DoctorStatus {
     ACTIVE,
